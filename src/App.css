@@ -4,11 +4,19 @@
   height: 100vh;
 }
 .loading {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 40px);
   height: 100vh;
   background: url(/public/pokemon_ball.png) 50% 50% no-repeat;
   background-size: 300px auto;
   background-color: #fff;
+}
+@media screen and (max-width:768px) {
+  .loading {
+    width: calc(100% + 20px);
+  }
 }
 .pokemonCardContainer {
   display: grid;
