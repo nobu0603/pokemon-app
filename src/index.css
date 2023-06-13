@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EAEAEA;
+  padding: 0 20px;
+}
+@media screen and (max-width:768px) {
+  body {
+    padding: 0 10px;
+  }
 }
 
 code {

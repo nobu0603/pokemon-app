@@ -1,38 +1,52 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  width: 100%;
+  height: 100vh;
+  background: url(/public/pokemon_ball.png) 50% 50% no-repeat;
+  background-size: 300px auto;
+  background-color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.pokemonCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+  gap: 20px;
+}
+@media screen and (max-width:768px) {
+  .pokemonCardContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width:468px) {
+  .pokemonCardContainer {
+    grid-template-columns: 1fr;
+  }
+}
+.btn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0 40px;
 }
-
-.App-link {
-  color: #61dafb;
+.btn button {
+  padding: 13px 32px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn button:hover {
+  transform: translateY(2px);
+  box-shadow: none;
 }

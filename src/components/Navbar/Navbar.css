@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 20px 0;
+    color: #222;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px -5px #777777;
+    border-radius: 15px;
+}
+nav span {
+    position: relative;
+}
+nav span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    background: url(/public/pokemon_ball.png) 0 0 no-repeat;
+    background-size: 100% auto;
+}
+@media screen and (max-width:768px) {
+    nav span::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        width: 30px;
+        height: 30px;
+        transform: translateY(-50%);
+        background: url(/public/pokemon_ball.png) 0 0 no-repeat;
+        background-size: 100% auto;
+    }   
+}
